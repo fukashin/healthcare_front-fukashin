@@ -1,26 +1,26 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
+    "target": "es5", // コンパイル後のJavaScriptのバージョンをES5に設定
+    "lib": [ // 使用するライブラリを指定（ここではDOMとESNextのライブラリを利用）
+      "dom", // DOM操作に必要な型を含む
+      "dom.iterable", // DOMの反復可能な型を含む（for...of構文などで使用）
+      "esnext" // 最新のJavaScript機能（ESNext）を含むライブラリ
     ],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx"
+    "allowJs": true, // JavaScriptファイルもTypeScriptプロジェクトに含める
+    "skipLibCheck": true, // ライブラリファイル（.d.tsファイル）の型チェックをスキップし、コンパイル速度を向上させる
+    "esModuleInterop": true, // ESモジュールとの互換性を持たせ、CommonJSモジュールのインポートを許可する
+    "allowSyntheticDefaultImports": true, // デフォルトエクスポートがないモジュールでも、デフォルトエクスポートのようにインポートできる
+    "strict": true, // TypeScriptのすべての厳密モードオプションを有効化する（型チェックがより厳密になる）
+    "forceConsistentCasingInFileNames": true, // ファイル名の大文字小文字の一貫性を強制（大文字小文字の違いによるエラーを防ぐ）
+    "noFallthroughCasesInSwitch": true, // switch文のcaseがfallthroughしないようにする（意図しない動作を防止）
+    "module": "esnext", // モジュールのターゲットをESNext（最新のECMAScriptモジュールシステム）に設定
+    "moduleResolution": "node", // Node.jsのモジュール解決アルゴリズムを使用
+    "resolveJsonModule": true, // JSONファイルをモジュールとしてインポートできるようにする
+    "isolatedModules": true, // 各ファイルを個別のモジュールとして扱う（Babelとの互換性が向上）
+    "noEmit": true, // コンパイル結果を出力せず、型チェックのみを行う
+    "jsx": "react-jsx" // ReactでJSX構文をサポートする設定（React 17以降での新しいJSX変換に対応）
   },
   "include": [
-    "src"
+    "src" // "src"ディレクトリ以下のファイルのみコンパイル対象とする
   ]
 }
